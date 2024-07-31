@@ -23,6 +23,6 @@ function scrollToTop() {
 let link = document.createElement('link');
 link.type = 'text/css';
 link.rel = 'stylesheet';
-link.href = 'file:///home/phantom/Desktop/portfolio/custom.css';
+link.href = 'https://github.com/felix312/Portfolio/blob/main/custom.css';
 
 document.querySelector('head').appendChild(link);
