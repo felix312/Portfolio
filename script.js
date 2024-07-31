@@ -23,6 +23,6 @@ function scrollToTop() {
 let link = document.createElement('link');
 link.type = 'text/css';
 link.rel = 'stylesheet';
-link.href = 'https://raw.githubusercontent.com/felix312/Portfolio/main/custom.css';
+link.href = 'https://cdn.jsdelivr.net/gh/felix312/Portfolio@main/custom.css';
 
 document.querySelector('head').appendChild(link);
