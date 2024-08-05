@@ -1,12 +1,18 @@
-// This is a code for the dark-mode toggle
 document.getElementById('dark-mode-toggle').addEventListener('click', function () {
     document.body.classList.toggle('dark-mode');
+    const icon = this.querySelector('i');
     if (document.body.classList.contains('dark-mode')) {
-        this.textContent = 'Light Mode';
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
     } else {
-        this.textContent = 'Dark Mode';
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
     }
 });
+
+function hideLoader() {
+    document.getElementById('loader').style.display = 'none';
+}
 
 // Show or hide the "Back to Top" button based on scroll position
 window.onscroll = function () {

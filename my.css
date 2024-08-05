@@ -1,88 +1,77 @@
-/* From Uiverse.io by Nawsome */ 
-/* This is the loader function */
-.svg-frame {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    transform-style: preserve-3d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .svg-frame svg {
-    position: absolute;
-    transition: .5s;
-    z-index: calc(1 - (0.2 * var(--j)));
-    transform-origin: center;
-    width: 344px;
-    height: 344px;
-    fill: none;
-  }
-  
-  .svg-frame:hover svg {
-    transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
-  }
-  
-  .svg-frame svg #center {
-    transition: .5s;
-    transform-origin: center;
-  }
-  
-  .svg-frame:hover svg #center {
-    transform: rotate(-30deg) translateX(45px) translateY(-3px);
-  }
-  
-  #out2 {
-    animation: rotate16 7s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
-  #out3 {
-    animation: rotate16 3s ease-in-out infinite alternate;
-    transform-origin: center;
-    stroke: #ff0;
-  }
-  
-  #inner3,
-  #inner1 {
-    animation: rotate16 4s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
-  #center1 {
-    fill: #ff0;
-    animation: rotate16 2s ease-in-out infinite alternate;
-    transform-origin: center;
-  }
-  
-  @keyframes rotate16 {
-    to {
-      transform: rotate(360deg);
-    }
-  }
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-#welcome {
-    padding: 160px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url("https://github.com/felix312/Portfolio/blob/main/WELCOME.jpg?raw=true");
+.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
 }
 
-#logo {
+/* Loader Styling */
+#loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.svg-frame {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-frame svg {
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
+    transition: 0.5s;
+    z-index: calc(1 - (0.2 * var(--j)));
+    transform-origin: center;
+    width: 100px;
+    height: 100px;
+    fill: none;
 }
 
-/* Navbar styling */
+#out2,
+#out3,
+#inner3,
+#inner1,
+#center1 {
+    animation: rotate16 7s ease-in-out infinite alternate;
+    transform-origin: center;
+}
+
+#out3,
+#inner3,
+#inner1,
+#center1 {
+    animation-duration: 3s;
+}
+
+#center1 {
+    fill: #ff0;
+}
+
+#out3 {
+    stroke: #ff0;
+}
+
+@keyframes rotate16 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Navbar Styling */
 nav {
     background-color: brown;
     text-align: center;
@@ -102,106 +91,22 @@ nav a:hover {
     background-color: blueviolet;
 }
 
-#about a {
-    background-color: brown;
-    color: black;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 20px;
-}
-
-#about a:visited {
-    background-color: blue;
-}
-
-#about a:hover {
-    background-color: hotpink;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.dark-mode {
-    background-color: #333;
-    color: #f0f0f0;
-}
-
-nav {
-    text-align: center;
-    background-color: #444;
-    padding: 10px;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.rounded-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 20px;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.rounded-btn:hover {
-    background-color: #0056b3;
-}
-
-#dark-mode-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-}
-
-#footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #444;
-    color: white;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-.dark-mode #footer {
-    background-color: #222;
-}
-
+/* Reused Styling for Links */
 ul {
     list-style: none;
-    /* Remove default list styles */
     padding: 0;
     margin: 0;
 }
 
 ul li {
     display: inline-block;
-    /* Display list items horizontally */
     margin-right: 10px;
-    /* Add spacing between list items */
 }
 
 ul li a {
     display: inline-block;
     padding: 10px 15px;
     border-radius: 20px;
-    /* Add rounded corners to links */
     background-color: brown;
     color: black;
     text-decoration: none;
@@ -221,15 +126,44 @@ ul li a:active {
 
 ul li a i {
     margin-right: 5px;
-          }
-
-#footer {
-    background-color: whitesmoke;
-    color: black;
-    text-align: center;
-    padding: 0;
 }
 
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #007BFF;
+}
+
+.dark-mode-icon i {
+    font-size: 24px;
+}
+
+.dark-mode #dark-mode-toggle {
+    color: #f0f0f0;
+}
+
+/* Footer Styling */
+#footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(45deg, #ff0066, #ffcc00, #66ff66, #00ccff, #cc66ff);
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 50px;
+}
+
+.dark-mode #footer {
+    background: linear-gradient(45deg, #ff0066, #ffcc00, #66ff66, #00ccff, #cc66ff);
+}
+
+/* Section Backgrounds */
 #about,
 #services,
 #contact {
@@ -253,14 +187,12 @@ ul li a i {
 }
 
 h3,
-h4 {
-    color: black;
-}
-
+h4,
 p {
     color: black;
 }
 
+/* Button Styling */
 .rounded-btn {
     border-radius: 20px;
     padding: 10px 20px;
@@ -275,6 +207,7 @@ p {
     cursor: pointer;
 }
 
+/* Back to Top Button */
 #back-to-top {
     display: none;
     position: fixed;
@@ -288,8 +221,8 @@ p {
     cursor: pointer;
 }
 
+/* Media Queries */
 @media only screen and (max-width: 600px) {
-    /* Styles for screens less than or equal to 600px wide */
     #welcome {
         padding: 80px;
     }
@@ -302,10 +235,7 @@ p {
         padding: 10px 15px;
     }
 
-    #about a {
-        padding: 8px 12px;
-    }
-
+    #about a,
     ul li a {
         padding: 8px 12px;
     }

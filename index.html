@@ -9,7 +9,15 @@
     <title>Felix's Portfolio</title>
 </head>
 
-<body>
+<body  onload="hideLoader()">
+    <div id="loader" class="svg-frame">
+        <svg id="out2" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" /></svg>
+        <svg id="out3" viewBox="0 0 100 100"><circle cx="50" cy="50" r="35" /></svg>
+        <svg id="inner1" viewBox="0 0 100 100"><circle cx="50" cy="50" r="25" /></svg>
+        <svg id="inner3" viewBox="0 0 100 100"><circle cx="50" cy="50" r="15" /></svg>
+        <svg id="center1" viewBox="0 0 100 100"><circle cx="50" cy="50" r="5" /></svg>
+    </div>
+    
     <div id="welcome">
         <img id="logo" style="height: 80px; width: 80;" src="https://github.com/felix312/Portfolio/blob/main/logo.jpeg?raw=true" alt="Logo">
     </div>
@@ -25,7 +33,7 @@
     </div>
 
     <button id="dark-mode-toggle" class="rounded-btn">Dark Mode</button>
-    
+
     <p style="font-family: cursive; font-weight: bolder; font-size: medium; color: white;">Interact and get to know more about Me!</p>
 
     <button id="back-to-top" onclick="scrollToTop()">Back to Top</button>
