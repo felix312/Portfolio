@@ -23,8 +23,8 @@ body {
 
 .svg-frame {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     transform-style: preserve-3d;
     display: flex;
     justify-content: center;
@@ -36,8 +36,8 @@ body {
     transition: 0.5s;
     z-index: calc(1 - (0.2 * var(--j)));
     transform-origin: center;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     fill: none;
 }
 
@@ -130,7 +130,7 @@ ul li a i {
 
 /* Dark Mode Toggle */
 #dark-mode-toggle {
-    position: fixed;
+    position: right;
     top: 10px;
     right: 10px;
     background: none;
