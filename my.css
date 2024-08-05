@@ -15,16 +15,16 @@ body {
 /* Loader Styling */
 #loader {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 30%;
+    transform: translate(-25%, -25%);
     z-index: 1000;
 }
 
 .svg-frame {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     transform-style: preserve-3d;
     display: flex;
     justify-content: center;
@@ -154,7 +154,7 @@ ul li a i {
     background: linear-gradient(45deg, #ff0066, #ffcc00, #66ff66, #00ccff, #cc66ff);
     color: white;
     position: fixed;
-    width: 100%;
+    width: 50%;
     bottom: 0;
     height: 50px;
 }
