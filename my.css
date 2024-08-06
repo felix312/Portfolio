@@ -12,7 +12,6 @@ body {
     color: #f0f0f0;
 }
 
-/* Loader Styling */
 #loader {
     position: fixed;
     top: 30%;
@@ -41,18 +40,11 @@ body {
     fill: none;
 }
 
-#out2,
-#out3,
-#inner3,
-#inner1,
 #center1 {
     animation: rotate16 7s ease-in-out infinite alternate;
     transform-origin: center;
 }
 
-#out3,
-#inner3,
-#inner1,
 #center1 {
     animation-duration: 3s;
 }
@@ -61,17 +53,12 @@ body {
     fill: #ff0;
 }
 
-#out3 {
-    stroke: #ff0;
-}
-
 @keyframes rotate16 {
     to {
         transform: rotate(360deg);
     }
 }
 
-/* Navbar Styling */
 nav {
     background-color: brown;
     text-align: center;
@@ -91,7 +78,6 @@ nav a:hover {
     background-color: blueviolet;
 }
 
-/* Reused Styling for Links */
 ul {
     list-style: none;
     padding: 0;
@@ -147,7 +133,6 @@ ul li a i {
     color: #f0f0f0;
 }
 
-/* Footer Styling */
 #footer {
     text-align: center;
     padding: 10px;
@@ -163,7 +148,6 @@ ul li a i {
     background: linear-gradient(45deg, #ff0066, #ffcc00, #66ff66, #00ccff, #cc66ff);
 }
 
-/* Section Backgrounds */
 #about,
 #services,
 #contact {
@@ -192,7 +176,6 @@ p {
     color: black;
 }
 
-/* Button Styling */
 .rounded-btn {
     border-radius: 20px;
     padding: 10px 20px;
@@ -207,7 +190,6 @@ p {
     cursor: pointer;
 }
 
-/* Back to Top Button */
 #back-to-top {
     display: none;
     position: fixed;
