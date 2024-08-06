@@ -14,7 +14,7 @@ function hideLoader() {
     document.getElementById('loader').style.display = 'none';
 }
 
-// Show or hide the "Back to Top" button based on scroll position
+// Show or hide the "Back to Top" button
 window.onscroll = function () {
     scrollFunction();
 };
@@ -30,7 +30,6 @@ function scrollFunction() {
     }
 }
 
-// Scroll to the top when the button is clicked
 function scrollToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
