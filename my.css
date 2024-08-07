@@ -20,20 +20,20 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    animation: ring 2s linear;
+    animation: ring 2s linear infinite;
 }
 
 @keyframes ring {
     0% {
         transform: rotate(0deg);
-        box-shadow:1px 5px 2px #e65c00;
+        box-shadow: 1px 5px 2px #e65c00;
     }
     50% {
         transform: rotate(180deg);
-        box-shadow:1px 5px 2px #18b201;
+        box-shadow: 1px 5px 2px #18b201;
     }
     100% {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
         box-shadow: 1px 5px 2px #0456c8;
     }
 }
@@ -48,9 +48,9 @@ body {
 
 @keyframes text {
     50% {
-        color: black;;
+        color: black;
     }
-} 
+}
 
 .dark-mode {
     background-color: #333;
@@ -162,61 +162,13 @@ ul li a i {
     background-image: url("https://github.com/felix312/Portfolio/blob/main/secteam.jpeg?raw=true");
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #282c34;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 800px;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-h3 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-ul li strong {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-ul li ul {
-    margin-left: 20px;
-}
-
-ul li ul li {
-    margin-bottom: 5px;
-}
-
-    
 #contact {
     background-image: url("https://github.com/felix312/Portfolio/blob/main/contact.jpg?raw=true");
 }
 
-h3, h4, p {
+h3,
+h4,
+p {
     color: black;
 }
 
@@ -232,12 +184,13 @@ h3, h4, p {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    position: relative;
 }
 
 .rounded-btn__text {
-   font: bold 20px 'Quicksand', sans-serif;
-   color: #ffffff;
-   transition: all 0.2s;
+    font: bold 20px 'Quicksand', sans-serif;
+    color: #ffffff;
+    transition: all 0.2s;
 }
 
 .rounded-btn--loading .rounded-btn__text {
@@ -245,7 +198,7 @@ h3, h4, p {
     opacity: 0;
 }
 
-.rounded-btn--loading::after{
+.rounded-btn--loading::after {
     content: "";
     position: absolute;
     width: 16px;
@@ -256,7 +209,7 @@ h3, h4, p {
     right: 0;
     bottom: 0;
     margin: auto;
-    border: 4px solid transparent transparent;
+    border: 4px solid transparent;
     border-top-color: #ffffff;
     border-radius: 50%;
     animation: rounded-btn--loading-spinner 1s ease infinite;
