@@ -11,9 +11,9 @@ document.getElementById('dark-mode-toggle').addEventListener('click', function (
 });
 
 // Rounded button
-const btn = document.querySelector(".button");
+//const btn = document.querySelector(".button");
 
-btn.classList.toggle("button--loading");
+//btn.classList.toggle("button--loading");
 
 // Show or hide the "Back to Top" button
 window.onscroll = function () {
