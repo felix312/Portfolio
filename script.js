@@ -10,9 +10,10 @@ document.getElementById('dark-mode-toggle').addEventListener('click', function (
     }
 });
 
-function hideLoader() {
-    document.getElementById('loader').style.display = 'none';
-}
+// Rounded button
+const btn = document.querySelector(".button");
+
+btn.classList.toggle("button--loading");
 
 // Show or hide the "Back to Top" button
 window.onscroll = function () {
