@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     let link = document.createElement('link');
     link.type = 'text/css';
     link.rel = 'stylesheet';
-    link.href = 'https://cdn.jsdelivr.net/gh/felix312/Portfolio@main/my.css';
+    link.href = 'https://cdn.jsdelivr.net/gh/felix312/Portfolio@main/custom.css';
 
     document.querySelector('head').appendChild(link);
 });
