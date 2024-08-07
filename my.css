@@ -38,7 +38,7 @@ body {
     }
 }
 
-span {
+.span {
     color: #737373;
     font-size: 20px;
     text-transform: uppercase;
